@@ -8,7 +8,11 @@ The four nations are: the "Water Tribes", the "Earth Kingdom", the "Fire Nation"
 
 ### Instructions
 
-Using an Airbender API provided to you by your instructors, retrieve a subset of information, and display the relevant information per the instructions from your instructor.
+Using an Airbender API 
+
+-- retrieve All Avatars
+-- retrieve Characters by Nation
+-- retrieve a Character by its ID
 
 ### Versions
 
