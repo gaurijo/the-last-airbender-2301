@@ -10,6 +10,9 @@ RSpec.describe AvatarService do
       expect(avatar).to be_a(Hash)
       expect(avatar).to have_key(:_id)
       expect(avatar).to have_key(:name)
+      expect(avatar).to have_key(:gender)
+      expect(avatar).to have_key(:enemies)
+      expect(avatar[:enemies]).to be_a(Array)
     end
   end
 end
