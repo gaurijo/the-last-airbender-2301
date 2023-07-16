@@ -1,4 +1,6 @@
-
-<% @avatars.each do |ava| %>
-  <%= ava.name %>
+<h1>All The Avatars</h1>
+<% @avatars.each do |avatar| %>
+  <h2><%= avatar.name unless avatar.name == "Aang (games)" || avatar.name == "Aang (pilot)" %></h2>
+  <p><%= image_tag("#{avatar.photoUrl}")%>
 <% end %>
+
