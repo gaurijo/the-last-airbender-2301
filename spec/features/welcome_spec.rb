@@ -6,6 +6,10 @@ RSpec.describe 'Welcome Page' do
 
     expect(page).to have_button('Search For Members')
   end
+
+  xit 'takes the user to a specific nation where the user can see all members belonging to that nation' do 
+    # I'll need to consume separate api endpoint to retrieve members by nation affiliation
+  end
   
   it 'has a button to see all the Avatars' do 
 
