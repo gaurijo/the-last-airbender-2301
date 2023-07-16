@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe AvatarFacade do 
+RSpec.describe AvatarFacade, :vcr do 
   it "returns data for Avatars" do 
     response = AvatarFacade.create_avatar
     expect(response).to be_a(Array)

@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe AvatarService do 
+RSpec.describe AvatarService, :vcr do 
   it "returns all Avatar characters" do 
     avatars = AvatarService.get_avatars
 
