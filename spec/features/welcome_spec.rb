@@ -1,13 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe 'Welcome Page' do 
-  it 'has a dropdown menu to search members by their nation' do 
+  it 'has a dropdown menu to search members by their nation', :vcr do 
     visit '/'
 
     expect(page).to have_button('Search For Members')
   end
 
-  xit 'takes the user to a specific nation where the user can see all members belonging to that nation' do 
+  it 'takes the user to a specific nation where the user can see all members belonging to that nation', :vcr do 
+    visit '/'
+
+    expect(current_path).to eq("/")
+
+    select "Fire Nation", :from => :nation
+
+    click_button "Search For Members"
+
+    expect(current_path).to eq("/search")
     # I'll need to consume separate api endpoint to retrieve members by nation affiliation
   end
   

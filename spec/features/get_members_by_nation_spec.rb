@@ -10,5 +10,7 @@ RSpec.describe "as a visitor", :vcr do
     click_button "Search For Members"
 
     expect(current_path).to eq("/search")
+    expect(page).to have_content("Members of ")
+    expect(page).to have_css("img")
   end
 end
