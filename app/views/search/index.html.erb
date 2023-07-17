@@ -1,0 +1,6 @@
+<h1>Members of <%="#{@nation.delete("+").upcase}"%> </h1>
+
+<% @members.each do |member| %>
+  <h3><%= member.name %></h3>
+  <p><%= image_tag("#{member.photoUrl}") %></p>
+<% end %>
