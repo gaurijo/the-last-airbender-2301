@@ -1,4 +1,6 @@
-<h1>Members of <%="#{@nation.delete("+").upcase}"%> </h1>
+<% @nation = @nation.split("").map {|n| n.gsub("+", " ")}.join.upcase%>
+
+<h1>THE <%="#{@nation}"%> </h1>
 
 <% @members.each do |member| %>
   <h3><%= member.name %></h3>
